@@ -1,0 +1,9 @@
+version: "3"
+services:
+  go_lambda:
+    container_name: go_lambda
+    build: .
+    volumes:
+      - ./lambda:/go/src/lambda
+      - ./usr:/root
+    tty: true
